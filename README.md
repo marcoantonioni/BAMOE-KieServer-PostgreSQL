@@ -164,7 +164,7 @@ psql -c "CREATE USER kieserver WITH PASSWORD 'kie01server' CREATEROLE CREATEDB;"
 psql -c "\du+;"
 
 #-------------------------
-# drop old if already present
+# drop old db if already present
 PGPASSWORD=kie01server psql -U kieserver -h 127.0.0.1 -d postgres -c "DROP DATABASE kieserver01;"
 
 #-------------------------
@@ -196,11 +196,15 @@ PGPASSWORD=kie01server psql -U kieserver -h 127.0.0.1 -d kieserver01 -c "\dt+"
 Download PostgreSQL jdbc driver from https://jdbc.postgresql.org/download/
 ```
 #-------------------------
-# add postgresql driver (set your file fullpath)
+# add postgresql driver (set your file fullpath) using jboss-cli.sh
+
+# run cli
 ./jboss-cli.sh
 
+# run command
 module add --name=com.postgresql --resources=/home/marco/Downloads/postgresql-42.5.1.jar --dependencies=javaee.api,sun.jdk,ibm.jdk,javax.api,javax.transaction.api
 
+# quit cli
 exit
 ```
 
