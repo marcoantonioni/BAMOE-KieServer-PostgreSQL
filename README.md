@@ -210,7 +210,7 @@ exit
 
 ### Configure PostgreSQL datasource in JBoss EAP server
 
-In section '<system-properties>' of your configuration file ( one of standalone.xml, standalone-full.xml, etc...) add the following properties
+In section 'system-properties' of your configuration file ( one of standalone.xml, standalone-full.xml, etc...) add the following properties
 <ul>org.kie.server.persistence.ds</ul>
 <ul>org.kie.server.persistence.dialect</ul>
 <ul>org.kie.server.persistence.org.jbpm.ejb.timer.tx</ul>
