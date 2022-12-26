@@ -303,7 +303,7 @@ If you are interested in datsource consumption statistics run the following comm
 ./jboss-cli.sh -c "/subsystem=datasources/data-source=PostgresDS/statistics=jdbc:write-attribute(name=statistics-enabled,value=true)"
 ```
 
-the query the metrics using the following commands
+then query the metrics using the following commands
 ```
 # query pool metrics
 ./jboss-cli.sh -c "/subsystem=datasources/data-source=PostgresDS/statistics=pool:read-resource(include-runtime=true)"
